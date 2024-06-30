@@ -1,0 +1,31 @@
+{
+  "endOfLine": "lf",
+  "semi": true,
+  "tabWidth": 2,
+  "printWidth": 100,
+  "trailingComma": "es5",
+  "quoteProps": "as-needed",
+  "jsxSingleQuote": true,
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "arrowParens": "always",
+  "importOrder": [
+    "^(solidjs/(.*)$)|^(solidjs$)",
+    "<THIRD_PARTY_MODULES>",
+    "",
+    "^types$",
+    "^@/types(.*)$",
+    "^@/config(.*)$",
+    "^@/services(.*)$",
+    "^@/lib(.*)$",
+    "^@/hooks(.*)$",
+    "^@/components/ui/(.*)$",
+    "^@/components(.*)$",
+    "^@/styles/(.*)$",
+    "^@/app/(.*)$",
+    "",
+    "^[./]"
+  ],
+  "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],
+  "plugins": ["@ianvs/prettier-plugin-sort-imports"]
+}

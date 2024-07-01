@@ -6,6 +6,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export default defineConfig({
+  solid: {
+    ssr: true,
+  },
   server: {
     preset: "vercel",
     prerender: {

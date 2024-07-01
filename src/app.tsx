@@ -7,6 +7,7 @@ import { lazy, Suspense } from "solid-js";
 import SiteFooter from "./components/site-footer";
 import SiteNavbar from "./components/site-navbar";
 
+import "./libs/dayjs";
 import "./app.css";
 
 const SolidNProgress = lazy(() => import("./components/nprogress"));

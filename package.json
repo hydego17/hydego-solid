@@ -14,6 +14,7 @@
     "autoprefixer": "^10.4.19",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "dayjs": "^1.11.11",
     "lucide-solid": "^0.399.0",
     "nprogress": "^0.2.0",
     "pocketbase": "^0.21.3",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.3.0",
+    "@kobalte/tailwindcss": "^0.9.0",
     "@types/nprogress": "^0.2.3",
     "eslint": "^9.6.0",
     "eslint-config-prettier": "^9.1.0",

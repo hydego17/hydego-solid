@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  url: "https://hydego.id",
+  url: "https://hydego-solid.vercel.app",
   title: "Hydego",
   name: "Umma Ahimsha",
   description:

@@ -1,4 +1,4 @@
-import { cache, createAsync, RouteDefinition, useParams } from "@solidjs/router";
+import { A, cache, createAsync, RouteDefinition, useParams } from "@solidjs/router";
 import { Accessor, Show } from "solid-js";
 
 import { getProjectDetail } from "@/services/cms";
@@ -20,7 +20,13 @@ export default function ProjectDetailPage() {
 
   return (
     <main class='flex-1'>
-      <MetaTags title={project().title} description={project().subtitle} />
+      {!!project() && (
+        <MetaTags
+          title={project().title}
+          description={project().subtitle}
+          path={`/projects/${params.slug}`}
+        />
+      )}
 
       <Show when={!!project()}>
         <section class='container grid items-center gap-6 pb-8 pt-6 md:py-10'>
@@ -50,22 +56,22 @@ export default function ProjectDetailPage() {
               <div class='flex items-center gap-4'>
                 <Show when={project().link}>
                   <div>
-                    <a href={project().link!} target='_blank' rel='noreferrer'>
+                    <A href={project().link!} target='_blank' rel='noreferrer'>
                       <div class='flex items-center gap-2 rounded-md border border-transparent bg-secondary p-2.5 text-secondary-foreground hover:border-primary/10'>
                         <Icons.globe class='h-4 w-4' />
                         <span class='sr-only'>Link</span>
                       </div>
-                    </a>
+                    </A>
                   </div>
                 </Show>
 
                 <Show when={!!project().repo}>
-                  <a href={project().repo!} target='_blank' rel='noreferrer'>
+                  <A href={project().repo!} target='_blank' rel='noreferrer'>
                     <div class='rounded-md border border-transparent bg-secondary p-2.5 text-secondary-foreground hover:border-primary/10'>
                       <Icons.gitHub class='h-4 w-4' />
                       <span class='sr-only'>Repo</span>
                     </div>
-                  </a>
+                  </A>
                 </Show>
               </div>
             </div>

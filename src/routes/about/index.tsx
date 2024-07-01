@@ -11,12 +11,12 @@ export const route = {
   load: () => fetchAboutPage(),
 } satisfies RouteDefinition;
 
-export default function About() {
+export default function AboutPage() {
   const aboutPage = createAsync(() => fetchAboutPage());
 
   return (
     <main class='flex-1'>
-      <MetaTags title='About' />
+      <MetaTags title='About' path='/about' />
 
       <section class='container grid items-center gap-6 pb-8 pt-6 md:py-10'>
         <div class='flex max-w-[980px] flex-col items-start gap-2'>

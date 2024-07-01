@@ -1,4 +1,4 @@
-import { cache, createAsync, RouteDefinition } from "@solidjs/router";
+import { A, cache, createAsync, RouteDefinition } from "@solidjs/router";
 import { For } from "solid-js";
 
 import { siteConfig } from "@/config/site";
@@ -55,29 +55,29 @@ function ProjectItem({ project }: { project: Project }) {
 
       <div class='flex flex-1 flex-col justify-between gap-4 md:py-0.5'>
         <div>
-          <a href={`/projects/${project.slug}`}>
+          <A href={`/projects/${project.slug}`}>
             <h3 class='text-lg font-bold group-hover:underline'>{project.title}</h3>
-          </a>
+          </A>
           <p class='mt-2 line-clamp-2 text-mini text-muted-foreground'>{project.subtitle}</p>
         </div>
 
         <div class='flex gap-3'>
           {project.link && (
-            <a href={project.link} target='_blank' rel='noreferrer'>
+            <A href={project.link} target='_blank' rel='noreferrer'>
               <div class='rounded-md border border-transparent bg-secondary p-2 text-secondary-foreground hover:border-primary/10'>
                 <Icons.globe class='h-3.5 w-3.5' />
                 <span class='sr-only'>Link</span>
               </div>
-            </a>
+            </A>
           )}
 
           {project.repo && (
-            <a href={project.repo} target='_blank' rel='noreferrer'>
+            <A href={project.repo} target='_blank' rel='noreferrer'>
               <div class='rounded-md border border-transparent bg-secondary p-2 text-secondary-foreground hover:border-primary/10'>
                 <Icons.gitHub class='h-3.5 w-3.5' />
                 <span class='sr-only'>Repo</span>
               </div>
-            </a>
+            </A>
           )}
         </div>
       </div>

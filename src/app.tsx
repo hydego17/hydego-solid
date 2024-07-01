@@ -6,8 +6,8 @@ import { lazy, Suspense } from "solid-js";
 
 import SiteFooter from "./components/site-footer";
 import SiteNavbar from "./components/site-navbar";
+import DayJsProvider from "./libs/dayjs";
 
-import "./libs/dayjs";
 import "./app.css";
 
 const SolidNProgress = lazy(() => import("./components/nprogress"));
@@ -18,6 +18,7 @@ export default function App() {
       root={(props) => (
         <MetaProvider>
           <Suspense>
+            <DayJsProvider />
             <SolidNProgress />
             <ColorModeScript />
             <ColorModeProvider initialColorMode='dark'>

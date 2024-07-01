@@ -15,4 +15,6 @@ dayjs.extend(relativeTime);
 dayjs.extend(duration);
 dayjs.locale("id");
 
-export default dayjs;
+export default function DayJsProvider() {
+  return null;
+}

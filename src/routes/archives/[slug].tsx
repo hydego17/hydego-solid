@@ -1,8 +1,8 @@
 import { cache, createAsync, RouteDefinition, useParams } from "@solidjs/router";
+import dayjs from "dayjs";
 import { Show } from "solid-js";
 
 import { getArchivePost } from "@/services/cms";
-import dayjs from "@/libs/dayjs";
 import BlockContent from "@/components/block-content/block-content";
 import MetaTags from "@/components/meta-tags";
 
